@@ -7,6 +7,7 @@
 #include "game.hpp"
 #include "utility.h"
 #include "gui-helpers.hpp"
+#include "_hooks.hpp"
 
 namespace SettingsTab {
 	void Render();

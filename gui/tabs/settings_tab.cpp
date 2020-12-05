@@ -1,4 +1,5 @@
 #include "settings_tab.h"
+#include <thread>
 
 namespace SettingsTab {
 	void Render() {
@@ -15,6 +16,16 @@ namespace SettingsTab {
 			if (ImGui::Button("Reset Theme Color")) {
 				State.SelectedColor = State.DefaultColor;
 			}
+
+			ImGui::Dummy(ImVec2(7, 7));
+			ImGui::Separator();
+			ImGui::Dummy(ImVec2(7, 7));
+
+			if (ImGui::Button("UnInject AmongUsMenu", ImVec2(ImGui::GetWindowWidth() * 0.9f, 0)))
+			{
+				std::thread thread(UninjectDLL);
+			}
+
 			ImGui::EndTabItem();
 		}
 	}

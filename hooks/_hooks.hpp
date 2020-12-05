@@ -14,6 +14,7 @@
 #include "radar.hpp"
 #include "console.hpp"
 #include "resources.h"
+#include "main.h"
 
 typedef HRESULT(__stdcall* D3D_PRESENT_FUNCTION)(IDXGISwapChain*, UINT, UINT);
 
@@ -27,6 +28,7 @@ struct MapTexture {
 extern std::vector<MapTexture> maps;
 
 void DetourInitilization();
+void UninjectDLL();
 
 void dSceneManager_Internal_ActiveSceneChanged(Scene previousActiveScene, Scene newActiveScene, MethodInfo* method);
 
